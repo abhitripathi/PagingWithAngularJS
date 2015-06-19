@@ -1,0 +1,15 @@
+/**
+  * Description     :   Controller class for the AngularJS page having paging functionality
+  *
+  * Created Date    :   6/19/2015
+  *
+  * Created Date    :   Abhishek Tripathi
+  *
+  * Version         :   V1.0
+  **/
+global class BlogOneController {
+    @RemoteAction
+    global static List<Account> getAllAccounts() {    
+        return [SELECT Id,Name,BillingStreet,BillingCity,BillingState FROM Account];
+    }
+}
